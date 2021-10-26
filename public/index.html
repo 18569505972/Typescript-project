@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+  <meta name="viewport"
+  content="width=device-width, initial-scale=1, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+	<meta name="theme-color" content="#000000">
+	<link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+	<link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+	<title>React App</title>
+  <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
+  <script src="./assets/scripts/aframe-ar-nft.js"></script>
+</head>
+
+<body style="width: 100vw;height: 100vh;overflow: hidden;">
+	<noscript>
+		You need to enable JavaScript to run this app.
+	</noscript>
+  <a-scene vr-mode-ui='enabled: false;' renderer="logarithmicDepthBuffer: true;" embedded
+    arjs='trackingMethod: best; sourceType: webcam; debugUIEnabled: false;'>
+
+    <a-nft type='nft' url='./assets/fset/demo/demo' smooth='true' smoothCount='10'
+      smoothTolerance='0.01' smoothThreshold='5'>
+      <a-entity gltf-model='./assets/gltf/demo.gltf' scale="5 5 5" position="150 300 -100">
+      </a-entity>
+    </a-nft>
+    <a-entity camera></a-entity>
+  </a-scene>
+  <!-- <a-entity><a-sphere position="0 0 0" radius="50" color="#f47920"></a-sphere></a-entity> -->
+	<div id="root" style="display: none;"></div>
+</body>
+
+</html>

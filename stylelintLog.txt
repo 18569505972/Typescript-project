@@ -1,0 +1,4 @@
+
+src/styles.css
+ 2:10  ✖  Expected "#fff" to be "#FFF"   color-hex-case
+
